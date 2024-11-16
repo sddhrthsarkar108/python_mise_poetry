@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "python-mise-poetry"
+version = "0.1.0"
+description = "python project template with mise as vm and poetry as dm"
+authors = ["Siddhartha Sarkar <sidsar@duck.com>"]
+readme = "README.md"
+packages = [
+    { include = "my_package" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<=3.13"
+crewai = "^0.80.0"
+langgraph = "^0.2.50"
+
+[tool.poetry.scripts]
+start = "my_package.main:start"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
